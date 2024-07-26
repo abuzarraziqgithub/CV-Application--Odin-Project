@@ -1,54 +1,52 @@
-import { useState } from "react";
-
-function Education() {
-  const [state, setState] = useState({
-    uniName: "",
-    fieldStudy: "",
-    totalEdYears: "",
-  });
-
-  function handleChange(event) {
-    const value = event.target.value;
-
-    setState({
-      ...state,
-      [event.target.name]: value,
+function Education({ education, setEducation }) {
+  function handleInputChangeE(e) {
+    const { name, value } = e.target;
+    setEducation({
+      ...education,
+      [name]: value,
     });
   }
   return (
     <>
-      <div className="bg-orange-300  border-4 border-neutral-800 flex justify-center items-center flex-col mt-10 w-1/2 rounded-lg ml-5 p-10">
-        <label htmlFor="Institute/UniversityName">
-          Institute/University Name:
+      <div
+        className=" flex flex-col   md:m-5 justify-around md:overflow-scroll md:overflow-x-hidden 
+      "
+      >
+        <h1 className="text-2xl">Educational Information:</h1>
+        <label htmlFor="uniName">
+          University/Institute:
+          <input
+            type="text"
+            name="uniName"
+            id="uniName"
+            value={education.uniName}
+            onChange={handleInputChangeE}
+            className="border-2 w-full pl-3 outline-sky-400"
+          />
         </label>
-        <input
-          type="text"
-          name="uniName"
-          value={state.uniName}
-          onChange={handleChange}
-          className="rounded-sm"
-        />
-        <br />
-        <br />
-        <label htmlFor="studyField">Field of Study: </label>
-        <input
-          type="text"
-          name="studyField"
-          value={state.fieldStudy}
-          onChange={handleChange}
-          className="rounded-sm"
-        />
+        <label htmlFor="field">
+          Field of study:
+          <input
+            type="text"
+            name="field"
+            id="field"
+            value={education.field}
+            onChange={handleInputChangeE}
+            className="border-2 w-full pl-3 outline-sky-400"
+          />
+        </label>
 
-        <br />
-        <br />
-        <label htmlFor="totalEdYears">Years of Education: </label>
-        <input
-          type="number"
-          name="totalEdYears"
-          value={state.totalEdYears}
-          onChange={handleChange}
-          className="rounded-sm"
-        />
+        <label htmlFor="eduYears">
+          Years of Education:
+          <input
+            type="text"
+            name="eduYears"
+            id="eduYears"
+            value={education.eduYears}
+            onChange={handleInputChangeE}
+            className="border-2 w-full pl-3 outline-sky-400"
+          />
+        </label>
       </div>
     </>
   );
