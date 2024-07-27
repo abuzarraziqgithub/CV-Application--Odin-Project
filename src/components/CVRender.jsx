@@ -10,7 +10,7 @@ function CVRender({ basicInfo, education, experiences }) {
         <p className="w-full text-red-900 font-semibold">
           {basicInfo.userEmail}
         </p>
-        <p className=" w-36 text-gray-300 font-semibold  rounded-md bg-sky-700">
+        <p className=" w-36 text-gray-300 font  rounded-md bg-sky-700">
           {basicInfo.userPhone}
         </p>
       </div>
