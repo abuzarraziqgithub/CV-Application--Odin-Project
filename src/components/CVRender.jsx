@@ -25,7 +25,7 @@ function CVRender({ basicInfo, education, experiences }) {
       </div>
       <div id="education" className="flex flex-col ">
         <h2 className="font-medium text-3xl ml-4 mt-5 mb-3">Education:</h2>
-        <ul className="bg-slate-300  rounded-md flex flex-col items-start space-y-3 p-5 w-full ml-4">
+        <ul className="bg-slate-300  rounded-md flex flex-col items-start space-y-3 p-5 w-full ml-4 mr-4">
           <li className=" bg-red-500 text-stone-300 p-2 font-semibold rounded-md">
             {education.uniName}
           </li>
@@ -39,7 +39,7 @@ function CVRender({ basicInfo, education, experiences }) {
       </div>
       <div id="experience" className="flex flex-col ">
         <h2 className="font-medium text-3xl ml-4 mt-5 mb-3">Job Experience:</h2>
-        <ul className="bg-slate-300  rounded-md flex flex-col items-start space-y-3 p-5 w-full ml-4">
+        <ul className="bg-slate-300  rounded-md flex flex-col items-start space-y-3 p-5 w-full ml-4 mr-4">
           <li className=" bg-violet-800 text-stone-300 p-2 font-semibold rounded-md">
             {experiences.company}
           </li>
