@@ -17,6 +17,7 @@ function PersonalInfo({ basicInfo, setBasicInfo }) {
           Name:
           <input
             type="text"
+            antialiased
             name="userName"
             id="userName"
             value={basicInfo.userName}
@@ -30,6 +31,7 @@ function PersonalInfo({ basicInfo, setBasicInfo }) {
             type="email"
             name="userEmail"
             id="userEmail"
+            antialiased
             value={basicInfo.userEmail}
             onChange={handleInputChange}
             className="border-2 w-full pl-3 outline-sky-400"
@@ -42,6 +44,7 @@ function PersonalInfo({ basicInfo, setBasicInfo }) {
             type="tel"
             name="userPhone"
             id="userPhone"
+            antialiased
             value={basicInfo.userPhone}
             onChange={handleInputChange}
             className="border-2 w-full pl-3 outline-sky-400"
@@ -56,6 +59,7 @@ function PersonalInfo({ basicInfo, setBasicInfo }) {
             value={basicInfo.aboutYourself}
             onChange={handleInputChange}
             rows={3}
+            antialiased
             placeholder="I'm a React Frontend Developer..."
             className="outline-sky-400"
           />
